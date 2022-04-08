@@ -12,12 +12,6 @@ public:
             i+=1;
         }
         
-      // if(lastInc==-1){
-      //       for(i=0;i<n/2;i++){
-      //           swap(nums[i],nums[n-i-1]);
-      //       return;
-      //   }
-      // }
            if (lastInc < 0)
     {
         reverse(nums.begin(), nums.end());
