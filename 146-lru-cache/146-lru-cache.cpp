@@ -42,7 +42,7 @@ class LRUCache {
     if (m.find(key_) != m.end()) {
       node * resnode = m[key_];
       int res = resnode -> val;
-      m.erase(key_);
+     
       deletenode(resnode);
       addnode(resnode);
       m[key_] = head -> next;
