@@ -5,12 +5,12 @@ public:
         for(auto i : nums) ++counts[i];
         
         vector<vector<int>> buckets(nums.size() + 1);
-        for(auto  k : counts) 
+        for(auto  &k : counts) 
             buckets[k.second].push_back(k.first);
         reverse(begin(buckets), end(buckets));
         
         vector<int> res;
-        for(auto  bucket: buckets) 
+        for(auto  &bucket: buckets) 
             for(auto i : bucket) {
                 res.push_back(i);
                 if(res.size() == k) return res;
